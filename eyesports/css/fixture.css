@@ -1,0 +1,10 @@
+input.resultados {
+  width: 23%;
+  display: block;
+  margin-left: 40%;
+  margin-bottom: 12%;
+  border-radius: 5px;
+  font-size: 2.5rem;
+  padding-left: 6%;
+  padding-right: 0%;
+}
