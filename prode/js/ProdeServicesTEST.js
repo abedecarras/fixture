@@ -56,7 +56,7 @@ var ProdeServicesTEST = (function () {
                 'name': 'Grupo A',
                 'table': [
                     {
-                        'team': 'Brasil',
+                        'team': 'Rusia',
                         'wons': 2,
                         'draws': 1,
                         'lost': 0,
@@ -64,7 +64,7 @@ var ProdeServicesTEST = (function () {
                         'goalsC': 2
                     },
                     {
-                        'team': 'Méjico',
+                        'team': 'A.Saudita',
                         'wons': 2,
                         'draws': 1,
                         'lost': 0,
@@ -72,7 +72,7 @@ var ProdeServicesTEST = (function () {
                         'goalsC': 1
                     },
                     {
-                        'team': 'Croacia',
+                        'team': 'Egipto',
                         'wons': 1,
                         'draws': 0,
                         'lost': 2,
@@ -80,7 +80,7 @@ var ProdeServicesTEST = (function () {
                         'goalsC': 6
                     },
                     {
-                        'team': 'Camerún',
+                        'team': 'Uruguay',
                         'wons': 0,
                         'draws': 0,
                         'lost': 3,
@@ -94,7 +94,7 @@ var ProdeServicesTEST = (function () {
                 'name': 'Grupo B',
                 'table': [
                     {
-                        'team': 'Holanda',
+                        'team': 'Portugal',
                         'wons': 3,
                         'draws': 0,
                         'lost': 0,
@@ -102,7 +102,7 @@ var ProdeServicesTEST = (function () {
                         'goalsC': 3
                     },
                     {
-                        'team': 'Chile',
+                        'team': 'España',
                         'wons': 2,
                         'draws': 0,
                         'lost': 1,
@@ -110,7 +110,7 @@ var ProdeServicesTEST = (function () {
                         'goalsC': 3
                     },
                     {
-                        'team': 'España',
+                        'team': 'Marruecos',
                         'wons': 1,
                         'draws': 0,
                         'lost': 2,
@@ -118,7 +118,7 @@ var ProdeServicesTEST = (function () {
                         'goalsC': 7
                     },
                     {
-                        'team': 'Australia',
+                        'team': 'Irán',
                         'wons': 0,
                         'draws': 0,
                         'lost': 3,
