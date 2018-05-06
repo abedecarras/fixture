@@ -19,3 +19,25 @@ input.resultados {
     border-radius: 4px;
     box-sizing: border-box;
 }*/
+
+/*.prize-counter {
+  border: 5px solid blue;
+	float: left;
+	width: 42px;
+	height: 42px;
+	color: black;
+	font-size: 24px;
+	text-align: center;
+	padding: 5px 0px 0px 0px;
+}*/
+
+.prize-counter {
+	border: 5px solid #447eee;
+	color: black;
+	float: left;
+	font-size: 30px;
+	font-weight: 400;
+	margin: 0 20px 0 0;
+	padding: 15px 20px;
+	text-transform: uppercase;
+ }
