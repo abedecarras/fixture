@@ -22,11 +22,11 @@
 		03.1.2 Blog Grid
 		03.1.3 Blog Medium
 		03.1.4 Blog Detail
-	
+
 	03.2 Gallery
 		03.4.1 Simple Gallery
 		03.4.2 Video Gallery
-	
+
 	03.4 Team
 		03.4.1 Team Grid
 		03.4.2 Team Detail
@@ -41,7 +41,7 @@
 		03.5.7 Partner
 		03.5.8 Twitter
 		03.5.9 Call To Action
- 
+
 	03.6 Default Pages Style
 		03.6.1 404
 		03.6.2 UnderCuntruction
@@ -52,7 +52,7 @@
 	03.7 Shop
 		03.7.1 Shop Listing
 		03.7.2 Shop Detail
- 
+
 04. Sidebar Widget
 	04.1 Widget CATEGORY WIDGET
 	04.2 Widget Search
@@ -61,7 +61,7 @@
 	04.5 Widget Recent Posts
 	04.6 Widget Recent Tweets
 	04.7 Widget Newsletter
- 
+
 05. Footer
 	05.1 backTo Top
 	05.2 CopyRight
@@ -544,7 +544,7 @@ address {font-style: italic;}
 	padding: 20px;
 	opacity:0;
 	visibility: hidden;
-	
+
 	-webkit-transform: translateY(-15px);
 	   -moz-transform: translateY(-15px);
 	    -ms-transform: translateY(-15px);
@@ -893,7 +893,7 @@ address {font-style: italic;}
 	font-size: 18px;
 	color: #cdcdcd;
 	right: 30px;
-	line-height: 42px; 
+	line-height: 42px;
 }
 /* CartBox */
 .ec-cart-box {
@@ -1306,13 +1306,19 @@ span.ec-blue-transparent {
 	color: #fff;
 	margin-bottom: 20px;
 }
-.ec-promobox figcaption a { font-size: 11px; }
+.ec-promobox figcaption a {
+	/*font-size: 11px;*/
+	font-size: 16px;
+	font-weight: bold;
+}
 .ec-default-button {
 	display: inline-block;
 	color: #fff;
 	padding: 11px 22px;
-	background-color: #c6043f;
-	border-radius: 4px;
+	/*background-color: #c6043f;*/
+	background-color: #000000;
+	/*border-radius: 4px;*/
+	border-radius: 10px;
 }
 /* FancyTitle */
 .ec-fancy-title {
