@@ -41,3 +41,11 @@ input.resultados {
 	padding: 15px 20px;
 	text-transform: uppercase;
  }
+
+ .grupos {
+   background-color: #ffffff;
+ }
+
+ .text-button {
+   font-weight: bold;
+ }
