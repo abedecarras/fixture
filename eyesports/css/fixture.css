@@ -49,3 +49,7 @@ input.resultados {
  .text-button {
    font-weight: bold;
  }
+
+ .title {
+   text-align: center;
+ }
