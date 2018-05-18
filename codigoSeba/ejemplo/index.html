@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <title>Prode Mundial Rusia 2018</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="img/favicon.png">
+        <link rel="stylesheet" href="css/style.css">
+        <script src="js/ProdeServices.js"></script>
+        <script src="js/scripts.js"></script>
+    </head>
+    <body>
+        <div>
+            <a>
+                Login Avalon3
+            </a>
+            <button onclick="services.login('admin', 'avalon3', printResult);"><b>Administrador</b></button>
+            <button onclick="services.login('seba', 'seba', printResult);">Seba</button>
+            <button onclick="services.login('gerson', 'gerson', printResult);">Gerson</button>
+            <button onclick="services.login('nico', 'nico', printResult);">Nico</button>
+            <button onclick="services.login('huevo', 'huevo', printResult);">Agustín</button>
+            <button onclick="services.login('eric', 'eric', printResult);">Eric</button>
+            <button onclick="services.login('alan', 'alan', printResult);">Alan</button>
+        </div>
+        <div>
+            <a>
+                Login Weber
+            </a>
+            <button onclick="services.login('user1', 'pass', printResult);">Empleado 1</button>
+            <button onclick="services.login('user2', 'pass', printResult);">Empleado 2</button>
+            <button onclick="services.login('user3', 'pass', printResult);">Empleado 3</button>
+            <button onclick="services.login('user4', 'pass', printResult);">Empleado 4</button>
+        </div>
+        <div>
+            <a>
+               Funciones
+            </a>
+            <button onclick="services.logout(printResult);"><b>Logout</b></button>
+            <button onclick="services.getProfile(printResult);">getProfile()</button>
+            <button onclick="services.getRanking(printResult);">getRanking()</button>
+            <button onclick="services.getGroups(1, printResult);">getGroups(idStage: 1)</button>
+            <button onclick="services.getGroupMatchs(2, printResult);">getGroupMatchs(idGroup: 2)</button>
+            <button onclick="services.setMatchResult(7, 2, 1, 0, 0, printResult);">setMatchResult(idMatch: 7, goalsL: 2, goalsF: 1)</button>
+        </div>
+        <div>
+            <a>
+               Para testear
+            </a>
+            <button onclick="services.reset(printResult);">reset()</button>
+            <button onclick="services.setMatchDate(7, '2018-05-01 15:00:00', printResult);">setMatchDate(idMatch:7, newDate: '2018-05-01 15:00:00')</button>
+        </div>
+        <textarea readonly></textarea>
+    </body>
+</html>
