@@ -10,8 +10,8 @@
 .ec-skillst .count-bar,.ec-skillst .count-bar:before,.ec-blog-grid ul li:hover .ec-grid-time a,.flex-control-paging li a.flex-active,.ec-simple-gallery figcaption:before,
 .ec-shop-list figure figcaption ul li a,.ec-pagination li:hover a,.ec-pagination li.active a,.ec-tags a:hover,.nav-tabs > li.active > a,.ec-navigation ul > li > a:before,
 .ec-navigation > ul .as-dropdown > li:hover > a,.ec-user-section > li > a:hover,.ec-modallogin-form input[type="submit"],.ec-event.ec-event-listing .text h2 span {
-	/*background-color: #e95842;*/
-	background-color: rgb(43, 87, 203);
+	background-color: #e95842;
+	/*background-color: rgb(43, 87, 203);*/
 }
 
 .ec-bordercolor,.ec-bordercolorhover:hover,.caption-inner-wrap p {

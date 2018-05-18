@@ -50,6 +50,11 @@ input.resultados {
    font-weight: bold;
  }
 
+ .login {
+   background-color: rgb(43, 87, 203);
+   border-radius: 0px;
+ }
+
  .title {
    text-align: center;
  }
