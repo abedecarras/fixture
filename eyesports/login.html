@@ -40,9 +40,9 @@
                     <div class="ec-right-section">
                         <nav class="ec-navigation">
                             <ul>
-                                <li><a href="home.html">Home</a></li>
-                                <li><a href="grupos.html">Fixture</a></li>
-                                <li><a href="premios.html">Premios</a></li>
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">Fixture</a></li>
+                                <li><a href="#">Premios</a></li>
                                 <li><a href="#">Ranking</a></li>
                                 <li><a href="#">Reglamento</a></li>
                             </ul>
@@ -51,9 +51,9 @@
                         <div id="as-menu" class="as-menuwrapper">
                             <button class="as-trigger">Open Menu</button>
                             <ul class="as-menu">
-                                <li><a href="home.html">Home</a></li>
-                                <li><a href="grupos.html">Fixture</a></li>
-                                <li><a href="premios.html">Premios</a></li>
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">Fixture</a></li>
+                                <li><a href="#">Premios</a></li>
                                 <li><a href="#">Ranking</a></li>
                                 <li><a href="#">Reglamento</a></li>
                             </ul>
@@ -65,34 +65,24 @@
             <!--// Main Header \\-->
         </header>
         <!--// Main Header \\-->
-        <!--// Main Banner \\-->
-        <div class="title">
-            <!-- <span class="ec-blue-transparent"></span> -->
-            <!-- <div class="container"> -->
-                <!-- <div class="row"> -->
-                    <!-- <div class="col-md-12"> -->
-                        <!-- <div class="ec-mini-title"> -->
-                            <h1>RUSSIA 2018</h1>
-                        <!-- </div> -->
 
-                    <!-- </div> -->
-                <!-- </div> -->
-            <!-- </div> -->
-        </div>
-        <!--// Main Banner \\-->
         <!--// Main Content \\-->
-        <div class="ec-main-content">
+        <div class="ec-main-content" style="background-image:url(images/bg.jpg); line-height:2.8; padding-top:87px;">
             <!--// Main Section \\-->
+            <h1 class="title">RUSSIA 2018</h1>
             <div class="ec-main-section">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12">
                             <div class="ec-blog ec-blog-grid">
                                 <ul class="row">
-                                    <div class="modal-dialog" role="document">
-                                        <div class="modal-content">
+                                  <!-- <img src="images/img/pelota.png" alt=""> -->
+                                    <div class="modal-dialog">
+                                      <img src="images/img/pelota.png" id="pelota" alt="">
+                                        <div class="modal-div">
                                             <div class="modal-body">
                                                 <div class="ec-modallogin-form ec-login-popup">
+
                                                     <span class="ec-color">Login</span>
                                                     <form name="myForm">
                                                         <ul>
@@ -100,49 +90,16 @@
                                                                 <input type="text" name="fname" value="Nombre y Apellido" onblur="if(this.value == '') { this.value ='Nombre y Apellido'; }" onfocus="if(this.value =='Nombre y Apellido') { this.value = ''; }"> </li>
                                                             <li>
                                                                 <input type="text" name="fpassword" value="D.N.I" onblur="if(this.value == '') { this.value ='D.N.I'; }" onfocus="if(this.value =='D.N.I') { this.value = ''; }"> </li>
-                                                            <li> <!--<a href="#" class="ec-forgot-btn">Forgot Password?</a> </li>-->
+                                                            <li>
                                                             <li>
                                                                 <button type="button" class="ec-default-button login text-button" name="button" onclick="validation()">ingresar</button>
-                                                                <!-- <a href="home.html" class="ec-default-button login text-button">Ingresar</a> -->
-                                                                <!-- <input type="submit" value="ingresar"> -->
                                                             </li>
                                                         </ul>
                                                     </form>
                                                 </div>
-                                                <div class="ec-modallogin-form ec-register-popup">
-                                                    <span class="ec-color">create Your Account today</span>
-                                                    <form>
-                                                        <ul>
-                                                            <li>
-                                                                <input type="text" value="Your Username" onblur="if(this.value == '') { this.value ='Your Username'; }" onfocus="if(this.value =='Your Username') { this.value = ''; }"> </li>
-                                                            <li>
-                                                                <input type="text" value="Your E-mail" onblur="if(this.value == '') { this.value ='Your E-mail'; }" onfocus="if(this.value =='Your E-mail') { this.value = ''; }"> </li>
-                                                            <li>
-                                                                <input type="password" value="password" onblur="if(this.value == '') { this.value ='password'; }" onfocus="if(this.value =='password') { this.value = ''; }"> </li>
-                                                            <li>
-                                                                <input type="text" value="Confirm Password" onblur="if(this.value == '') { this.value ='Confirm Password'; }" onfocus="if(this.value =='Confirm Password') { this.value = ''; }"> </li>
-                                                            <li>
-                                                                <input type="submit" value="Create Account"> </li>
-                                                        </ul>
-                                                    </form>
-                                                    <span class="ec-color">or signup with your socials:</span>
-                                                    <ul class="ec-login-social-media">
-                                                        <li><a href="#"><i class="fa fa-facebook"></i> Facebook</a></li>
-                                                        <li class="ec-twitter-color"><a href="#"><i class="fa fa-twitter"></i> twitter</a></li>
-                                                        <li class="ec-googleplus-color"><a href="#"><i class="fa fa-google-plus-square"></i> Google+</a></li>
-                                                    </ul>
-                                                    <p>Already a member? <a href="#">Sign-in Here!</a></p>
-                                                </div>
                                             </div>
                                         </div>
-                                        <div class="clearfix"></div>
                                     </div>
-                                    <!-- <form class="" action="index.html" method="post">
-                                        <input type="text" name="" value="" placeholder="Nombre y Apellido">
-                                    </form>
-                                    <div class="ec-blog-text">
-                                        <h2><a href="#">LOGIN</a></h2>
-                                    </div> -->
                                 </ul>
                             </div>
                         </div>
@@ -152,9 +109,6 @@
             <!--// Main Section \\-->
         </div>
         <!--// Main Content \\-->
-        <footer id="ec-footer">
-
-        </footer>
     </div>
     <!--// Main Wrapper \\-->
 
