@@ -9,13 +9,16 @@ var printResult = function(response) {
 
 var apostar = function(idGroup, idMatch) {
   console.log('apostar');
-  let goalsL = document.getElementById(`lGoal${idMatch}`).value;
-  let goalsF = document.getElementById(`fGoal${idMatch}`).value;
+  let goalsL = document.getElementById(`lGoal${idMatch}`);//.value;
+  let goalsF = document.getElementById(`fGoal${idMatch}`);//.value;
+  // let l = document.getElementById(`lGoal${idMatch}`).style.color = 'blue';
+  // let f = document.getElementById(`fGoal${idMatch}`).style.color = 'blue';
+  goalsL.style.color = 'blue';
+  goalsF.style.color = 'blue';
+  // goalsL.className = 'sent';
+  // goalsF.className = 'sent';
 
-  console.log('local:',goalsL);
-  console.log('visita:',goalsF);
-
-  services.setMatchResult(idMatch, goalsL, goalsF, 0, 0, printResult);
+  services.setMatchResult(idMatch, goalsL.value, goalsF.value, 0, 0, printResult);
 }
 
 var cambiarFecha = function(idMatch) {
@@ -42,16 +45,8 @@ var cambiarFecha = function(idMatch) {
   }
 
   var loadResult = function(response) {
-    console.log('loadResult');
-    console.log(response);
     matches = response;
-
     for (item of matches) {
-      console.log('id:',item.id);
-      console.log('local team:',item.localTeam);
-      console.log('foreign team:',item.foreignTeam);
-      console.log('localGoalUser',item.localGoalsUser);
-      console.log('foreignGoalUser',item.foreignGoalsUser);
       if (item.localGoalsUser !=null) {
         document.getElementById(`lGoal${item.id}`).value = item.localGoalsUser;
       }
