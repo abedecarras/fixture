@@ -1085,6 +1085,7 @@ body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.42857143;
+  /*line-height: 4.8!important;*/
   color: #333;
   background-color: #fff;
 }
@@ -5935,6 +5936,7 @@ button.close {
   margin: 10px;
 }
 .modal-content {
+  /*height: 95%;*/
   position: relative;
   background-color: #fff;
   -webkit-background-clip: padding-box;
@@ -6962,6 +6964,7 @@ button.close {
 	padding: 79px 0px 20px 0px;
 }
 .ec-default-button.ec-blue { background-color: #171b95; }
+.ec-default-button.ec-white { background-color: #ffffff; }
 .ec-full-parallexbg {
 	background: url(../extra-images/call-to-action-fullbg.jpg);
 	padding: 55px 0px;
@@ -7069,7 +7072,7 @@ button.close {
     left: 50%;
     position: fixed;
     top: 50%;
-    transform: translateY(-30px);  
+    transform: translateY(-30px);
 }
   .ball-scale-multiple > div:nth-child(0) {
     -webkit-animation-delay: -0.8s;

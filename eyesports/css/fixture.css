@@ -47,7 +47,8 @@ input.resultados {
  }
 
  .text-button {
-   font-weight: bold;
+   font-weight: 400;
+   font-size: 20px;
  }
 
  .login {
@@ -57,4 +58,39 @@ input.resultados {
 
  .title {
    text-align: center;
+   color: #fff;
+   margin-top: -4%;
+   margin-bottom: 5%;
+ }
+
+ .hide {
+   display: none;
+ }
+
+ .margin {
+   margin-top: 15%;
+ }
+
+ .margin-top {
+  margin-top: 5%;
+ }
+
+ .modal-div {
+   background-color: #fff;
+ }
+
+ .cuadro {
+   background-color: rgb(118, 219, 246);
+   text-align: center;
+   width: 400px;
+ }
+
+ .main-content {
+   background-image:url('images/bg.jpg');
+ }
+
+ #pelota {
+   position: absolute;
+   width: 25%;
+   margin-top: -17%;
  }
