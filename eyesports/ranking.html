@@ -19,6 +19,9 @@
     <link href="css/responsive.css" rel="stylesheet">
 
     <link rel="stylesheet" href="css/fixture.css">
+    <script src="js/js/ProdeServices.js"></script>
+    <script src="js/js/scripts.js"></script>
+    <script src="js/js/ranking.js"></script>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -45,6 +48,7 @@
                                 <li><a href="premios.html">Premios</a></li>
                                 <li><a href="#">Ranking</a></li>
                                 <li><a href="#">Reglamento</a></li>
+                                <li><a href="login.html" onclick="services.logout()">Log Out</a></li>
                             </ul>
                         </nav>
                         <!--// Responsive Menu //-->
@@ -56,6 +60,7 @@
                               <li><a href="premios.html">Premios</a></li>
                               <li><a href="#">Ranking</a></li>
                               <li><a href="#">Reglamento</a></li>
+                              <li><a href="login.html" onclick="services.logout()">Log Out</a></li>
                             </ul>
                         </div>
                         <!--// Responsive Menu //-->
@@ -87,6 +92,7 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="ec-gallery ec-simple-gallery">
+                              <!-- <button class="ec-default-button" type="button" name="button" onclick="services.getRanking(showRanking);" >mostrar</button> -->
                               <!--// TablePoint \\-->
                               <div class="col-md-6">
                                   <div class="ec-fancy-title">
@@ -172,8 +178,8 @@
     // jQuery().newsTicker(options);
     </script>
 
-    <script src="js/js/ProdeServices.js"></script>
-    <script src="js/js/scripts.js"></script>
+
+
 </body>
 
 </html>
