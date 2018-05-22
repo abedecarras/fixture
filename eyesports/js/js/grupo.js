@@ -8,16 +8,14 @@ var printResult = function(response) {
 };
 
 var apostar = function(idGroup, idMatch) {
-  let goalsL = document.getElementById('lGoal').value;
-  let goalsF = document.getElementById('fGoal').value;
-
   console.log('apostar');
-  console.log();
+  let goalsL = document.getElementById(`lGoal${idMatch}`).value;
+  let goalsF = document.getElementById(`fGoal${idMatch}`).value;
+
   console.log('local:',goalsL);
   console.log('visita:',goalsF);
 
   services.setMatchResult(idMatch, goalsL, goalsF, 0, 0, printResult);
-  // services.getGroupMatchs(idGroup, printResult);
 }
 
 var cambiarFecha = function(idMatch) {
@@ -42,6 +40,32 @@ var cambiarFecha = function(idMatch) {
         }
     }
   }
+
+  var loadResult = function(response) {
+    console.log('loadResult');
+    console.log(response);
+    matches = response;
+
+    for (item of matches) {
+      console.log('id:',item.id);
+      console.log('local team:',item.localTeam);
+      console.log('foreign team:',item.foreignTeam);
+      console.log('localGoalUser',item.localGoalsUser);
+      console.log('foreignGoalUser',item.foreignGoalsUser);
+      if (item.localGoalsUser !=null) {
+        document.getElementById(`lGoal${item.id}`).value = item.localGoalsUser;
+      }
+      if (item.foreignGoalsUser !=null) {
+        document.getElementById(`fGoal${item.id}`).value = item.foreignGoalsUser;
+      }
+    }
+  }
+
+  var checkResult = function(idMatch) {
+    console.log('checkResult');
+    services.getGroupMatchs(idMatch, loadResult);
+  }
+
 
   var _initScript = function() {
     // let services = new ProdeServices();
