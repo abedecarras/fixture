@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="images/favicon.png">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Grupo A</title>
     <!-- Css Files -->
@@ -19,6 +20,10 @@
     <link href="css/responsive.css" rel="stylesheet">
 
     <link href="css/fixture.css" rel="stylesheet">
+
+    <script src="js/js/ProdeServices.js"></script>
+    <!-- <script src="js/js/scripts.js"></script> -->
+    <script src="js/js/grupo.js"></script>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -117,8 +122,13 @@
                                     </li>
                                     <li><small>Jueves</small>
                                         <time class="ec-color" datetime="2008-02-14 20:00">14 Junio </time> <small>12:00</small>
-                                        <input class="input-admin" type="text" name="" value="" id="date" placeholder="yyyy-mm-dd hh:mm">
+                                        <input class="input-admin" type="text" name="" value="" id="date" placeholder="yyyy-mm-dd hh:mm:ss">
                                         <button class="input-admin" type="button" name="button" onclick="cambiarFecha(1)">cambiar</button>
+                                        <div class="resultado-final" id="final1">
+                                          <p class="p-final-result" id="p-local1"></p>
+                                          <label class="label-final-result">Resultado Final</label>
+                                          <p class="p-final-result" id="p-foreign1"></p>
+                                        </div>
                                     </li>
                                     <li>
                                         <input type="text" class="resultados" id="fGoal1" maxlength="1" value="-" onblur="if(this.value == '') { this.value ='-'; }" onfocus="if(this.value =='-') { this.value = ''; }">
@@ -127,7 +137,7 @@
                                     </li>
                                 </ul>
                                 <button class="ec-default-button" type="button" name="button" onclick="apostar(1,1);" >apostar</button> <!--"setMatchResult(1, getElementById('lGoal').value, getElementById('fGoal').value)"-->
-                                <button class="ec-default-button" type="button" name="button" onclick="checkResult(1);">verificar</button>
+                                <!-- <button class="ec-default-button" type="button" name="button" onclick="checkResult(1);">verificar</button> -->
                                 <a class="ec-ticket-button">Estadio Olímpico Luzhnikí, Moscú</a>
                             </div>
                         </div>
@@ -147,6 +157,11 @@
                                         <time class="ec-color" datetime="2008-02-14 20:00">15 Junio</time> <small>09:00</small>
                                         <input class="input-admin" type="text" name="" value="" placeholder="yyyy-mm-dd hh:mm">
                                         <button class="input-admin" type="button" name="button" onclick="cambiarFecha(2)">cambiar</button>
+                                        <div class="resultado-final" id="final2">
+                                          <p class="p-final-result" id="p-local2"></p>
+                                          <label class="label-final-result">Resultado Final</label>
+                                          <p class="p-final-result" id="p-foreign2"></p>
+                                        </div>
                                     </li>
                                     <li>
                                         <input type="text" class="resultados" id="fGoal2" maxlength="1" value="-" onblur="if(this.value == '') { this.value ='-'; }" onfocus="if(this.value =='-') { this.value = ''; }">
@@ -178,6 +193,11 @@
                                       <time class="ec-color" datetime="2008-02-14 20:00">19 Junio</time> <small>15:00</small>
                                       <input class="input-admin" type="text" name="" value="" placeholder="yyyy-mm-dd hh:mm">
                                       <button class="input-admin" type="button" name="button" onclick="cambiarFecha(3)">cambiar</button>
+                                      <div class="resultado-final" id="final3">
+                                        <p class="p-final-result" id="p-local3"></p>
+                                        <label class="label-final-result">Resultado Final</label>
+                                        <p class="p-final-result" id="p-foreign3"></p>
+                                      </div>
                                   </li>
                                   <li>
                                       <input type="text" class="resultados" id="fGoal3" maxlength="1" value="-" onblur="if(this.value == '') { this.value ='-'; }" onfocus="if(this.value =='-') { this.value = ''; }">
@@ -206,6 +226,11 @@
                                       <time class="ec-color" datetime="2008-02-14 20:00">20 Junio</time> <small>12:00</small>
                                       <input class="input-admin" type="text" name="" value="" placeholder="yyyy-mm-dd hh:mm">
                                       <button class="input-admin" type="button" name="button" onclick="cambiarFecha(4)">cambiar</button>
+                                      <div class="resultado-final" id="final4">
+                                        <p class="p-final-result" id="p-local4"></p>
+                                        <label class="label-final-result">Resultado Final</label>
+                                        <p class="p-final-result" id="p-foreign4"></p>
+                                      </div>
                                   </li>
                                   <li>
                                       <input type="text" class="resultados" id="fGoal4" maxlength="1" value="-" onblur="if(this.value == '') { this.value ='-'; }" onfocus="if(this.value =='-') { this.value = ''; }">
@@ -237,6 +262,11 @@
                                       <time class="ec-color" datetime="2008-02-14 20:00">25 Junio</time> <small>11:00</small>
                                       <input class="input-admin" type="text" name="" value="" placeholder="yyyy-mm-dd hh:mm">
                                       <button class="input-admin" type="button" name="button" onclick="cambiarFecha(5)">cambiar</button>
+                                      <div class="resultado-final" id="final5">
+                                        <p class="p-final-result" id="p-local5"></p>
+                                        <label class="label-final-result">Resultado Final</label>
+                                        <p class="p-final-result" id="p-foreign5"></p>
+                                      </div>
                                   </li>
                                   <li>
                                       <input type="text" class="resultados" id="fGoal5" maxlength="1" value="-" onblur="if(this.value == '') { this.value ='-'; }" onfocus="if(this.value =='-') { this.value = ''; }">
@@ -265,6 +295,11 @@
                                       <time class="ec-color" datetime="2008-02-14 20:00">25 Junio</time> <small>11:00</small>
                                       <input class="input-admin" type="text" name="" value="" placeholder="yyyy-mm-dd hh:mm">
                                       <button class="input-admin" type="button" name="button" onclick="cambiarFecha(6)">cambiar</button>
+                                      <div class="resultado-final" id="final6">
+                                        <p class="p-final-result" id="p-local6"></p>
+                                        <label class="label-final-result">Resultado Final</label>
+                                        <p class="p-final-result" id="p-foreign6"></p>
+                                      </div>
                                   </li>
                                   <li>
                                       <input type="text" class="resultados" id="fGoal6" maxlength="1" value="-" onblur="if(this.value == '') { this.value ='-'; }" onfocus="if(this.value =='-') { this.value = ''; }">
@@ -306,7 +341,7 @@
     </div>
     <!--// Main Wrapper \\-->
     <!-- ModalLogin Box -->
-    <div class="modal fade" id="ModalLogin" tabindex="-1" role="dialog">
+    <!-- <div class="modal fade" id="ModalLogin" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-body">
@@ -359,7 +394,7 @@
             </div>
             <div class="clearfix"></div>
         </div>
-    </div>
+    </div> -->
     <!-- ModalLogin Box -->
     <!-- jQuery (necessary for JavaScript plugins) -->
     <script src="script/jquery.js"></script>
@@ -384,9 +419,7 @@
     // jQuery().newsTicker(options);
     </script>
 
-    <script src="js/js/ProdeServices.js"></script>
-    <!-- <script src="js/js/scripts.js"></script> -->
-    <script src="js/js/grupo.js"></script>
+
 </body>
 
 </html>

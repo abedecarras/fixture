@@ -24,10 +24,11 @@ var apostar = function(idGroup, idMatch) {
 var cambiarFecha = function(idMatch) {
   let fecha = document.getElementById('date').value;
   // console.log('fecha:',fecha);
-  console.log('idMatch:',idMatch);
+  // console.log('idMatch:',idMatch);
   console.log('fecha input:',fecha);
-  console.log('fecha:','2018-05-20 22:00:00');
+  // console.log('fecha:','2018-05-20 22:00:00');
   services.setMatchDate(idMatch, fecha, printResult);
+  // services.setMatchDate(idMatch, fecha, printResult);
   // services.setMatchDate(7, '2018-05-01 15:00:00', printResult);
   // services.setMatchDate(idMatch, fecha, printResult);
 }
@@ -42,9 +43,11 @@ var cambiarFecha = function(idMatch) {
           item.className = 'hide';
         }
     }
+    checkResult(1);
   }
 
   var loadResult = function(response) {
+    console.log(response);
     matches = response;
     for (item of matches) {
       if (item.localGoalsUser !=null) {
@@ -53,12 +56,18 @@ var cambiarFecha = function(idMatch) {
       if (item.foreignGoalsUser !=null) {
         document.getElementById(`fGoal${item.id}`).value = item.foreignGoalsUser;
       }
+      if (item.localGoalsMatch !=null) {
+        let div = document.getElementById(`final${item.id}`);
+        document.getElementById(`p-local${item.id}`).innerHTML = item.localGoalsMatch;
+        document.getElementById(`p-foreign${item.id}`).innerHTML = item.foreignGoalsMatch;
+        div.className = 'f-show';
+      }
     }
   }
 
-  var checkResult = function(idMatch) {
+  var checkResult = function(idGroup) {
     console.log('checkResult');
-    services.getGroupMatchs(idMatch, loadResult);
+    services.getGroupMatchs(idGroup, loadResult);
   }
 
 
