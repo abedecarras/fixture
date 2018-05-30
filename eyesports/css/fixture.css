@@ -67,6 +67,12 @@ input.resultados {
    display: none;
  }
 
+ .f-show {
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+ }
+
  .margin {
    margin-top: 15%;
  }
@@ -93,4 +99,27 @@ input.resultados {
    position: absolute;
    width: 25%;
    margin-top: -17%;
+ }
+
+ .resultado-final {
+   display: none;
+ }
+
+ .p-final-result {
+   color: green;
+   font-size: 1.4em;
+   font-weight: bold;
+ }
+
+ .label-final-result {
+   font-size: 1.2em;
+   font-weight: bold;
+ }
+
+ .none-style {
+   list-style: none !important;
+ }
+
+ .margin-top {
+   margin-top: 3%;
  }
