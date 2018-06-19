@@ -179,6 +179,12 @@ input.resultados {
     margin-bottom: 5%;
   }
 
+  .cnt {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
   .no-margin-left {
     margin-left: 0px!important;
   }
