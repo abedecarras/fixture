@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Grupos</title>
+    <title>Ranking</title>
     <!-- Css Files -->
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/font-awesome.css" rel="stylesheet">
@@ -22,6 +22,7 @@
     <script src="js/js/ProdeServices.js"></script>
     <script src="js/js/scripts.js"></script>
     <script src="js/js/ranking.js"></script>
+    <script src="js/js/jquery.js"></script>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -43,24 +44,29 @@
                     <div class="ec-right-section">
                         <nav class="ec-navigation">
                             <ul>
-                                <li><a href="home.html">Home</a></li>
-                                <li><a href="grupos.html">Fixture</a></li>
+                                <li><a href="home.html">Inicio</a></li>
+                                <li><a href="#">Fixture</a>
+                                  <ul class="as-dropdown">
+                                      <li><a href="grupos.html">Grupos</a></li>
+                                      <!-- <li><a href="fase-final.html">Fase Final</a></li> -->
+                                  </ul>
+                                </li>
                                 <li><a href="premios.html">Premios</a></li>
-                                <li><a href="#">Ranking</a></li>
-                                <li><a href="#">Reglamento</a></li>
-                                <li><a href="login.html" onclick="services.logout()">Log Out</a></li>
+                                <li class="active"><a href="#">Ranking</a></li>
+                                <li><a href="reglamento.html">Reglamento</a></li>
+                                <li><a href="login.html" onclick="services.logout()">Salir</a></li>
                             </ul>
                         </nav>
                         <!--// Responsive Menu //-->
                         <div id="as-menu" class="as-menuwrapper">
                             <button class="as-trigger">Open Menu</button>
                             <ul class="as-menu">
-                              <li><a href="home.html">Home</a></li>
+                              <li><a href="home.html">Inicio</a></li>
                               <li><a href="grupos.html">Fixture</a></li>
                               <li><a href="premios.html">Premios</a></li>
                               <li><a href="#">Ranking</a></li>
-                              <li><a href="#">Reglamento</a></li>
-                              <li><a href="login.html" onclick="services.logout()">Log Out</a></li>
+                              <li><a href="reglamento.html">Reglamento</a></li>
+                              <li><a href="login.html" onclick="services.logout()">Salir</a></li>
                             </ul>
                         </div>
                         <!--// Responsive Menu //-->
@@ -86,58 +92,40 @@
         <!--// Main Banner \\-->
         <!--// Main Content \\-->
         <div class="ec-main-content">
+          <div class="center">
+            <button type="button" name="button" class="update">
+              <a href="ranking.html">actualizar</a>
+              <img src="images/actualizar-flecha.png" alt="">
+            </button>
+
+          </div>
+
             <!--// Main Section \\-->
             <div class="ec-main-section">
                 <div class="container">
+
                     <div class="row">
                         <div class="col-md-12">
                             <div class="ec-gallery ec-simple-gallery">
+
                               <!-- <button class="ec-default-button" type="button" name="button" onclick="services.getRanking(showRanking);" >mostrar</button> -->
                               <!--// TablePoint \\-->
-                              <div class="col-md-6">
+                              <div class="col-md-12">
                                   <div class="ec-fancy-title">
-                                      <h2>Table Points</h2>
+                                      <h2>Tabla de Puntos</h2>
                                   </div>
                                   <div class="ec-table-point">
                                       <ul class="ec-table-head">
                                           <li>
                                               <div class="ec-cell">S.#</div>
                                               <div class="ec-cell">Nombre</div>
-                                              <div class="ec-cell">Empresa</div>
+                                              <div class="ec-cell">Planta</div>
+                                              <!-- <div class="ec-cell">Planta</div> -->
                                               <div class="ec-cell">Puntos</div>
                                           </li>
                                       </ul>
                                       <ul class="ec-table-list" id="0">
-                                          <!-- <li>
-                                              <div class="ec-cell">1</div>
-                                              <div class="ec-cell">Agustin</div>
-                                              <div class="ec-cell">Avalon</div>
-                                              <div class="ec-cell">28</div>
-                                          </li> -->
-                                          <!-- <li>
-                                              <div class="ec-cell">2</div>
-                                              <div class="ec-cell">empleado 2</div>
-                                              <div class="ec-cell">Weber</div>
-                                              <div class="ec-cell">23</div>
-                                          </li> -->
-                                          <!-- <li>
-                                              <div class="ec-cell">3</div>
-                                              <div class="ec-cell">Seba</div>
-                                              <div class="ec-cell">Avalon</div>
-                                              <div class="ec-cell">22</div>
-                                          </li> -->
-                                          <!-- <li>
-                                              <div class="ec-cell">4</div>
-                                              <div class="ec-cell">Gerson</div>
-                                              <div class="ec-cell">Avalon</div>
-                                              <div class="ec-cell">21</div>
-                                          </li> -->
-                                          <!-- <li>
-                                              <div class="ec-cell">5</div>
-                                              <div class="ec-cell">empleado 3</div>
-                                              <div class="ec-cell">Weber</div>
-                                              <div class="ec-cell">10</div>
-                                          </li> -->
+
                                       </ul>
                                   </div>
                               </div>
@@ -152,7 +140,22 @@
         </div>
         <!--// Main Content \\-->
         <footer id="ec-footer">
-
+            <!--// CopyRight Section \\-->
+            <div class="ec-bottom-section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <a href="#" class="ec-footer-logo"><img src="images/logo-1.png" alt=""></a>
+                        </div>
+                        <div class="col-md-7">
+                            <div class="ec-right-section">
+                                <a href="index.html" class="backtop-btn">Arriba <i class="fa fa-caret-up"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--// CopyRight Section \\-->
         </footer>
     </div>
     <!-- jQuery (necessary for JavaScript plugins) -->

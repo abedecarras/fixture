@@ -2,6 +2,7 @@
 .as-menuwrapper {
 	display: none;
 }
+.as-menu.as-menuopen{right: 0; background:white; border: 1px solid #969696;}
 .as-menuwrapper ul li { list-style: none; }
 .as-menuwrapper ul ul { margin: 0px; }
 .as-menuwrapper {
@@ -49,7 +50,7 @@
 	background: #fff;
 	top: 11px;
 	left: 26%;
-	box-shadow: 
+	box-shadow:
 		0 10px 0 #fff;
 }
 
@@ -71,7 +72,7 @@
 	font-size: 16px;
 	line-height: 20px;
 	font-weight: 300;
-	color: #fff;
+	color: #000; font-weight: bold;
 	outline: none;
 	text-transform: capitalize;
 }
@@ -119,6 +120,7 @@
 	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
 	text-align: left;
+	right: 0;
 }
 
 .as-menuwrapper .as-menu.as-menu-toggle {
@@ -137,10 +139,10 @@
 	display: none;
 }
 
-/* 
+/*
 When a submenu is openend, we will hide all li siblings.
 For that we give a class to the parent menu called "as-subview".
-We also hide the submenu link. 
+We also hide the submenu link.
 The opened submenu will get the class "as-subviewopen".
 All this is done for any sub-level being entered.
 */

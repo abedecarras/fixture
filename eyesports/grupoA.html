@@ -55,11 +55,16 @@
                         <nav class="ec-navigation">
                             <ul>
                                 <li><a href="home.html">Home</a></li>
-                                <li><a href="grupos.html">Fixture</a></li>
+                                <li class="active"><a href="#">Fixture</a>
+                                  <ul class="as-dropdown">
+                                      <li><a href="grupos.html">Grupos</a></li>
+                                      <!-- <li><a href="fase-final.html">Fase Final</a></li> -->
+                                  </ul>
+                                </li>
                                 <li><a href="premios.html">Premios</a></li>
                                 <li><a href="ranking.html">Ranking</a></li>
-                                <li><a href="#">Reglamento</a></li>
-                                <li><a href="login.html" onclick="services.logout()">Log Out</a></li>
+                                <li><a href="reglamento.html">Reglamento</a></li>
+                                <li><a href="login.html" onclick="services.logout()">Salir</a></li>
                             </ul>
                         </nav>
                         <!--// Responsive Menu //-->
@@ -70,8 +75,8 @@
                               <li><a href="grupos.html">Fixture</a></li>
                               <li><a href="premios.html">Premios</a></li>
                               <li><a href="ranking.html">Ranking</a></li>
-                              <li><a href="#">Reglamento</a></li>
-                              <li><a href="login.html" onclick="services.logout()">Log Out</a></li>
+                              <li><a href="reglamento.html">Reglamento</a></li>
+                              <li><a href="login.html" onclick="services.logout()">Salir</a></li>
                             </ul>
                         </div>
                         <!--// Responsive Menu //-->
@@ -88,7 +93,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="ec-mini-title">
-                            <h1>Grupo A</h1>
+                            <h1 id="group">Grupo A</h1>
                         </div>
                         <div class="margin-top">
                           <img src="images/img/rusia.png" alt="">
@@ -102,7 +107,6 @@
         </div>
         <!--// Main Banner \\-->
         <!--// Main Content \\-->
-        <button class="ec-default-button input-admin" type="button" name="button" onclick="services.reset(printResult);" >reset</button>
         <div class="ec-main-content">
             <!--// Main Section \\-->
             <div class="ec-main-section">
@@ -112,7 +116,6 @@
                             <div class="ec-fancy-title">
                                 <h2>Rusia vs A.Saudita</h2>
                             </div>
-                            <!-- <div> -->
                             <div class="item">
                                 <ul class="ec-team-matches">
                                     <li>
@@ -122,7 +125,7 @@
                                     </li>
                                     <li><small>Jueves</small>
                                         <time class="ec-color" datetime="2008-02-14 20:00">14 Junio </time> <small>12:00</small>
-                                        <input class="input-admin" type="text" name="" value="" id="date" placeholder="yyyy-mm-dd hh:mm:ss">
+                                        <input class="input-admin" type="text" name="" value="" id="date1" placeholder="yyyy-mm-dd hh:mm:ss">
                                         <button class="input-admin" type="button" name="button" onclick="cambiarFecha(1)">cambiar</button>
                                         <div class="resultado-final" id="final1">
                                           <p class="p-final-result" id="p-local1"></p>
@@ -136,8 +139,7 @@
                                         <label>A.Saudita</label>
                                     </li>
                                 </ul>
-                                <button class="ec-default-button" type="button" name="button" onclick="apostar(1,1);" >apostar</button> <!--"setMatchResult(1, getElementById('lGoal').value, getElementById('fGoal').value)"-->
-                                <!-- <button class="ec-default-button" type="button" name="button" onclick="checkResult(1);">verificar</button> -->
+                                <button class="ec-default-button center-btn" id="apostar1" type="button" name="button" onclick="apostar(1,1);" >Guardar</button> <!--"setMatchResult(1, getElementById('lGoal').value, getElementById('fGoal').value)"-->
                                 <a class="ec-ticket-button">Estadio Olímpico Luzhnikí, Moscú</a>
                             </div>
                         </div>
@@ -155,7 +157,7 @@
                                     </li>
                                     <li><small>Viernes</small>
                                         <time class="ec-color" datetime="2008-02-14 20:00">15 Junio</time> <small>09:00</small>
-                                        <input class="input-admin" type="text" name="" value="" placeholder="yyyy-mm-dd hh:mm">
+                                        <input class="input-admin" type="text" name="" value="" id="date2" placeholder="yyyy-mm-dd hh:mm">
                                         <button class="input-admin" type="button" name="button" onclick="cambiarFecha(2)">cambiar</button>
                                         <div class="resultado-final" id="final2">
                                           <p class="p-final-result" id="p-local2"></p>
@@ -169,10 +171,8 @@
                                         <label>Uruguay</label>
                                     </li>
                                 </ul>
-                                <button class="ec-default-button" type="button" name="button" onclick="apostar(1,2);">apostar</button>
-                                <!-- <div id="ec-Countdowntwo" class="ec-match-countdown"></div> -->
+                                <button class="ec-default-button center-btn" id="apostar2" type="button" name="button" onclick="apostar(1,2);">Guardar</button>
                                 <a class="ec-ticket-button">Ekaterimburgo Arena, Ekaterimburgo</a>
-                                <!-- <a href="#" class="ec-ticket-button">Less Than 600 Tickets Left For Villa</a> -->
                             </div>
                         </div>
                     </div>
@@ -191,7 +191,7 @@
                                   </li>
                                   <li><small>Martes</small>
                                       <time class="ec-color" datetime="2008-02-14 20:00">19 Junio</time> <small>15:00</small>
-                                      <input class="input-admin" type="text" name="" value="" placeholder="yyyy-mm-dd hh:mm">
+                                      <input class="input-admin" type="text" name="" value="" id="date3" placeholder="yyyy-mm-dd hh:mm">
                                       <button class="input-admin" type="button" name="button" onclick="cambiarFecha(3)">cambiar</button>
                                       <div class="resultado-final" id="final3">
                                         <p class="p-final-result" id="p-local3"></p>
@@ -205,10 +205,8 @@
                                       <label>Egipto</label>
                                   </li>
                               </ul>
-                              <button class="ec-default-button" type="button" name="button" onclick="apostar(1,3);">apostar</button>
-                              <!-- <div id="ec-Countdowntwo" class="ec-match-countdown"></div> -->
+                              <button class="ec-default-button center-btn" id="apostar3" type="button" name="button" onclick="apostar(1,3);">Guardar</button>
                               <a class="ec-ticket-button">Zenit Arena, San Petersburgo</a>
-                              <!-- <a href="#" class="ec-ticket-button">Less Than 600 Tickets Left For Villa</a> -->
                           </div>
                         </div>
                         <div class="col-md-6">
@@ -224,7 +222,7 @@
                                   </li>
                                   <li><small>Miercoles</small>
                                       <time class="ec-color" datetime="2008-02-14 20:00">20 Junio</time> <small>12:00</small>
-                                      <input class="input-admin" type="text" name="" value="" placeholder="yyyy-mm-dd hh:mm">
+                                      <input class="input-admin" type="text" name="" value="" id="date4" placeholder="yyyy-mm-dd hh:mm">
                                       <button class="input-admin" type="button" name="button" onclick="cambiarFecha(4)">cambiar</button>
                                       <div class="resultado-final" id="final4">
                                         <p class="p-final-result" id="p-local4"></p>
@@ -238,10 +236,8 @@
                                       <label>A.Saudita</label>
                                   </li>
                               </ul>
-                              <button class="ec-default-button" type="button" name="button" onclick="apostar(1,4);">apostar</button>
-                              <!-- <div id="ec-Countdowntwo" class="ec-match-countdown"></div> -->
+                              <button class="ec-default-button center-btn" id="apostar4" type="button" name="button" onclick="apostar(1,4);">Guardar</button>
                               <a class="ec-ticket-button">Rostov Arena, Rostov del Don</a>
-                              <!-- <a href="#" class="ec-ticket-button">Less Than 600 Tickets Left For Villa</a> -->
                           </div>
                         </div>
                     </div>
@@ -260,7 +256,7 @@
                                   </li>
                                   <li><small>Lunes</small>
                                       <time class="ec-color" datetime="2008-02-14 20:00">25 Junio</time> <small>11:00</small>
-                                      <input class="input-admin" type="text" name="" value="" placeholder="yyyy-mm-dd hh:mm">
+                                      <input class="input-admin" type="text" name="" value="" id="date5" placeholder="yyyy-mm-dd hh:mm">
                                       <button class="input-admin" type="button" name="button" onclick="cambiarFecha(5)">cambiar</button>
                                       <div class="resultado-final" id="final5">
                                         <p class="p-final-result" id="p-local5"></p>
@@ -274,10 +270,8 @@
                                       <label>Rusia</label>
                                   </li>
                               </ul>
-                              <button class="ec-default-button" type="button" name="button" onclick="apostar(1,5);">apostar</button>
-                              <!-- <div id="ec-Countdowntwo" class="ec-match-countdown"></div> -->
+                              <button class="ec-default-button center-btn" id="apostar5" type="button" name="button" onclick="apostar(1,5);">Guardar</button>
                               <a class="ec-ticket-button">Samara Arena, Samara</a>
-                              <!-- <a href="#" class="ec-ticket-button">Less Than 600 Tickets Left For Villa</a> -->
                           </div>
                         </div>
                         <div class="col-md-6">
@@ -293,7 +287,7 @@
                                   </li>
                                   <li><small>Lunes</small>
                                       <time class="ec-color" datetime="2008-02-14 20:00">25 Junio</time> <small>11:00</small>
-                                      <input class="input-admin" type="text" name="" value="" placeholder="yyyy-mm-dd hh:mm">
+                                      <input class="input-admin" type="text" name="" value="" id="date6" placeholder="yyyy-mm-dd hh:mm">
                                       <button class="input-admin" type="button" name="button" onclick="cambiarFecha(6)">cambiar</button>
                                       <div class="resultado-final" id="final6">
                                         <p class="p-final-result" id="p-local6"></p>
@@ -307,15 +301,43 @@
                                       <label>Egipto</label>
                                   </li>
                               </ul>
-                              <button class="ec-default-button" type="button" name="button" onclick="apostar(1,6)">apostar</button>
+                              <button class="ec-default-button center-btn" id="apostar6" type="button" name="button" onclick="apostar(1,6)">Guardar</button>
                               <a class="ec-ticket-button">Volgogrado Arena, Volgogrado</a>
                           </div>
                         </div>
                     </div>
+
+
                 </div>
+
+                <div class="center margin-top margin-bottom">
+                  <!--// TablePoint \\-->
+                  <div class="col-md-6">
+                      <div class="ec-table-point">
+                          <ul class="ec-table-list" id="0">
+                              <li>
+                                  <div class="ec-cell">#</div>
+                                  <div class="ec-cell">Equipo</div>
+                                  <div class="ec-cell">P</div>
+                                  <div class="ec-cell">G</div>
+                                  <div class="ec-cell">E</div>
+                                  <div class="ec-cell">P</div>
+                                  <div class="ec-cell">GF</div>
+                                  <div class="ec-cell">GC</div>
+                              </li>
+                          </ul>
+                      </div>
+                  </div>
+                  <!--// TablePoint \\-->
+                </div>
+
             </div>
             <!--// Main Section \\-->
+
         </div>
+
+
+
         <!--// Main Content \\-->
         <footer id="ec-footer">
             <!--// CopyRight Section \\-->
@@ -328,9 +350,12 @@
                                 <!-- <p>© copyright 2016 eyecix all rights reserved</p> -->
                             </div>
                         </div>
+
+                        <button class="ec-default-button input-admin" type="button" name="button" onclick="services.reset(printResult);" >reset</button>
+
                         <div class="col-md-7">
                             <div class="ec-right-section">
-                                <a href="index.html" class="backtop-btn">Back to top <i class="fa fa-caret-up"></i></a>
+                                <a href="index.html" class="backtop-btn">Arriba <i class="fa fa-caret-up"></i></a>
                             </div>
                         </div>
                     </div>

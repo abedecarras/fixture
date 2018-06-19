@@ -1,5 +1,5 @@
 
-var showRanking = function(response) {
+function showRanking(response) {
   console.log('showRanking');
   console.log('response:',response);
   let users = response;
@@ -12,30 +12,35 @@ var showRanking = function(response) {
     let user = document.createElement('div');
     user.textContent = users[i].name;
     user.className = 'ec-cell';
-    let company = document.createElement('div');
-    company.textContent = users[i].bussiness;
-    company.className = 'ec-cell';
+    let location = document.createElement('div');
+    location.textContent = users[i].location;
+    location.className = 'ec-cell';
     let score = document.createElement('div');
     score.textContent = users[i].score;
     score.className = 'ec-cell';
 
     li.appendChild(pos);
     li.appendChild(user);
-    li.appendChild(company);
+    li.appendChild(location);
     li.appendChild(score);
 
     document.getElementById('0').appendChild(li);
   }
 }
 
-var _initScript = function() {
+function _initScript() {
   let services = new ProdeServices();
-  //  $(document).ready(function(){
-  //    this.users = services.getRanking(showRanking);
+
+  // $(document).ready(function(){
+  //    services.getRanking(showRanking);
   //    console.log('ready');
   // });
   console.log("DOM fully loaded and parsed");
   services.getRanking(showRanking);
 }
 
+// $( document ).ready(function() {
+//     console.log( "ready!" );
+// });
+// $(document).ready(_initScript);
 document.addEventListener("DOMContentLoaded", _initScript);

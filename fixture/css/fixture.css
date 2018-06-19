@@ -1,0 +1,100 @@
+input.resultados {
+  width: 21%;
+  display: block;
+  margin-left: 40%;
+  margin-bottom: 12%;
+  border-radius: 5px;
+  font-size: 2.5rem;
+  padding-left: 6%;
+  padding-right: 4%;
+}
+
+
+/*input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}*/
+
+/*.prize-counter {
+  border: 5px solid blue;
+	float: left;
+	width: 42px;
+	height: 42px;
+	color: black;
+	font-size: 24px;
+	text-align: center;
+	padding: 5px 0px 0px 0px;
+}*/
+
+.prize-counter {
+	border: 5px solid #447eee;
+	color: black;
+	float: left;
+	font-size: 30px;
+	font-weight: 400;
+	margin: 0 20px 0 0;
+	padding: 15px 20px;
+	text-transform: uppercase;
+ }
+
+ .grupos {
+   background-color: #ffffff;
+ }
+
+ .text-button {
+   font-weight: 400;
+   font-size: 20px;
+ }
+
+ .login {
+   background-color: rgb(43, 87, 203);
+   border-radius: 0px;
+ }
+
+ .title {
+   text-align: center;
+   color: #fff;
+   margin-top: -4%;
+   margin-bottom: 5%;
+ }
+
+ .hide {
+   display: none;
+ }
+
+ .margin {
+   margin-top: 15%;
+ }
+
+ .margin-top {
+  margin-top: 5%;
+ }
+
+ .modal-div {
+   background-color: #fff;
+ }
+
+ .cuadro {
+   background-color: rgb(118, 219, 246);
+   text-align: center;
+   width: 400px;
+ }
+
+ .main-content {
+   background-image:url('images/bg.jpg');
+ }
+
+ #pelota {
+   position: absolute;
+   width: 25%;
+   margin-top: -17%;
+ }
+
+ .family {
+   font-family: 'Dusha', sans-serif;
+ }

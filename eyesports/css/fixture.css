@@ -1,12 +1,12 @@
 input.resultados {
-  width: 21%;
+  width: 37px;
   display: block;
   margin-left: 40%;
   margin-bottom: 12%;
   border-radius: 5px;
   font-size: 2.5rem;
-  padding-left: 6%;
-  padding-right: 4%;
+  padding-left: 10px;
+  padding-right: 7px;
 }
 
 
@@ -74,11 +74,15 @@ input.resultados {
  }
 
  .margin {
-   margin-top: 15%;
+   /*margin-top: 15%;*/
  }
 
  .margin-top {
   margin-top: 5%;
+ }
+
+ .margin-bottom {
+   margin-bottom: 0%!important;
  }
 
  .modal-div {
@@ -123,3 +127,58 @@ input.resultados {
  .margin-top {
    margin-top: 3%;
  }
+
+ .family {
+   font-family: 'Dusha', sans-serif;
+ }
+
+ .error {
+
+   display: none;
+ }
+
+ .e-show {
+   display: block;
+   border: 2px solid #8b0300;
+   color: #8b0300!important;
+   margin-bottom: 0px!important;
+ }
+
+ .p-error {
+  margin-bottom: 0px!important;
+ }
+
+ .list {
+   margin-left: 86px;
+   list-style: disc!important;
+ }
+
+ .parrafo {
+   margin-top: 20px;
+   font-size: 2rem;
+ }
+
+ .wrap {
+   width: 160px;
+ }
+
+ .wrap-big {
+   width: 103%;
+ }
+
+  .update{
+    width: 110px;
+    height: 25px;
+    background-color: rgb(104, 109, 250);
+    border-radius: 10px;
+  }
+
+  .center {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5%;
+  }
+
+  .no-margin-left {
+    margin-left: 0px!important;
+  }

@@ -5,8 +5,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="images/favicon.png">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Home</title>
+    <title>Inicio</title>
     <!-- Css Files -->
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/font-awesome.css" rel="stylesheet">
@@ -17,7 +18,7 @@
     <link href="css/flexslider.css" rel="stylesheet">
     <link href="css/prettyphoto.css" rel="stylesheet">
     <link href="css/responsive.css" rel="stylesheet">
-
+    <link href="css/llave.css" rel="stylesheet">
     <link rel="stylesheet" href="css/fixture.css">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -40,24 +41,29 @@
                     <div class="ec-right-section">
                         <nav class="ec-navigation">
                             <ul>
-                                <li><a href="#">Home</a></li>
-                                <li><a href="grupos.html">Fixture</a></li>
+                                <li class="active"><a href="#">Inicio</a></li>
+                                <li><a href="#">Fixture</a>
+                                  <ul class="as-dropdown">
+                                      <li><a href="grupos.html">Grupos</a></li>
+                                      <li><a href="fase-final.html">Fase Final</a></li>
+                                  </ul>
+                                </li>
                                 <li><a href="premios.html">Premios</a></li>
                                 <li><a href="ranking.html">Ranking</a></li>
-                                <li><a href="#">Reglamento</a></li>
-                                <li><a href="login.html" onclick="services.logout()">Log Out</a></li>
+                                <li><a href="reglamento.html">Reglamento</a></li>
+                                <li><a href="login.html" onclick="services.logout()">Salir</a></li>
                             </ul>
                         </nav>
                         <!--// Responsive Menu //-->
                         <div id="as-menu" class="as-menuwrapper">
                             <button class="as-trigger">Open Menu</button>
                             <ul class="as-menu">
-                              <li><a href="#">Home</a></li>
+                              <li><a href="#">Inicio</a></li>
                               <li><a href="grupos.html">Fixture</a></li>
                               <li><a href="premios.html">Premios</a></li>
                               <li><a href="ranking.html">Ranking</a></li>
-                              <li><a href="#">Reglamento</a></li>
-                              <li><a href="login.html" onclick="services.logout()">Log Out</a></li>
+                              <li><a href="reglamento.html">Reglamento</a></li>
+                              <li><a href="login.html" onclick="services.logout()">Salir</a></li>
                             </ul>
                         </div>
                     </div>
@@ -73,7 +79,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="ec-mini-title">
-                            <h1>home</h1>
+                            <h1>Inicio</h1>
                         </div>
                     </div>
                 </div>
@@ -90,18 +96,18 @@
                             <figure class="ec-promobox">
                                 <a href="#"><img src="images/img/promobox-1.jpg" alt=""></a>
                                 <figcaption>
-                                    <span>FIXTURE</span>
-                                    <p>Comenzá a pronosticar aquí!</p>
-                                    <a href="grupos.html" class="ec-default-button text-button margin">Ingresar</a>
+                                    <span class="family">FIXTURE</span>
+                                    <p class="parrafo wrap">Comenzá a pronosticar aquí!</p>
+                                    <a href="grupos.html" class="ec-default-button margin">Ingresar</a>
                                 </figcaption>
                             </figure>
                         </div>
                         <div class="col-md-6">
                             <figure class="ec-promobox">
-                                <a href="#"><img src="images/img/promobox-2.jpg" alt=""></a>
+                                <a href="#"><img src="images/img/promobox-2.png" alt=""></a>
                                 <figcaption>
-                                    <span>PREMIOS</span>
-                                    <p>Si acertás, ganás!</p>
+                                    <span class="family">PREMIOS</span>
+                                    <p class="parrafo">Si acertás, ganás!</p>
                                     <a href="premios.html" class="ec-default-button margin">Ingresar</a>
                                 </figcaption>
                             </figure>
@@ -109,9 +115,9 @@
                         <div class="col-md-6">
                             <figure class="ec-promobox">
                                 <a href="#"><img src="images/img/promobox-3.jpg" alt=""></a>
-                                <figcaption>
-                                    <span>REGLAMENTO</span>
-                                    <p>Todo el reglamento y funciones de juego</p>
+                                <figcaption class="responsive">
+                                    <span class="family">REGLAMENTO</span>
+                                    <p class="parrafo">Todo el reglamento y funciones de juego</p>
                                     <a href="#" class="ec-default-button margin">Ingresar</a>
                                 </figcaption>
                             </figure>
@@ -119,9 +125,9 @@
                         <div class="col-md-6">
                             <figure class="ec-promobox">
                                 <a href="#"><img src="images/img/promobox-4.jpg" alt=""></a>
-                                <figcaption>
-                                    <span>RANKING</span>
-                                    <p>Tu posición en el ranking y la de tus compañeros</p>
+                                <figcaption class="responsive">
+                                    <span class="family">RANKING</span>
+                                    <p class="parrafo wrap-big">Tu posición en el ranking y la de tus compañeros</p>
                                     <a href="ranking.html" class="ec-default-button margin">Ingresar</a>
                                 </figcaption>
                             </figure>
@@ -133,7 +139,22 @@
         </div>
         <!--// Main Content \\-->
         <footer id="ec-footer">
-
+            <!--// CopyRight Section \\-->
+            <div class="ec-bottom-section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <a href="#" class="ec-footer-logo"><img src="images/logo-1.png" alt=""></a>
+                        </div>
+                        <div class="col-md-7">
+                            <div class="ec-right-section">
+                                <a href="index.html" class="backtop-btn">Arriba <i class="fa fa-caret-up"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--// CopyRight Section \\-->
         </footer>
     </div>
     <!--// Main Wrapper \\-->

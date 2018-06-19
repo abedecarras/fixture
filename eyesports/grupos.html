@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="images/favicon.png">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Grupos</title>
     <!-- Css Files -->
@@ -40,24 +41,29 @@
                     <div class="ec-right-section">
                         <nav class="ec-navigation">
                             <ul>
-                                <li><a href="home.html">Home</a></li>
-                                <li><a href="#">Fixture</a></li>
+                                <li><a href="home.html">Inicio</a></li>
+                                <li class="active"><a href="#">Fixture</a>
+                                  <ul class="as-dropdown">
+                                      <li><a href="grupos.html">Grupos</a></li>
+                                      <!-- <li><a href="fase-final.html">Fase Final</a></li> -->
+                                  </ul>
+                                </li>
                                 <li><a href="premios.html">Premios</a></li>
                                 <li><a href="ranking.html">Ranking</a></li>
-                                <li><a href="#">Reglamento</a></li>
-                                <li><a href="login.html" onclick="services.logout()">Log Out</a></li>
+                                <li><a href="reglamento.html">Reglamento</a></li>
+                                <li><a href="login.html" onclick="services.logout()">Salir</a></li>
                             </ul>
                         </nav>
                         <!--// Responsive Menu //-->
                         <div id="as-menu" class="as-menuwrapper">
                             <button class="as-trigger">Open Menu</button>
                             <ul class="as-menu">
-                              <li><a href="home.html">Home</a></li>
+                              <li><a href="home.html">Inicio</a></li>
                               <li><a href="#">Fixture</a></li>
                               <li><a href="premios.html">Premios</a></li>
                               <li><a href="ranking.html">Ranking</a></li>
-                              <li><a href="#">Reglamento</a></li>
-                              <li><a href="login.html" onclick="services.logout()">Log Out</a></li>
+                              <li><a href="reglamento.html">Reglamento</a></li>
+                              <li><a href="login.html" onclick="services.logout()">Salir</a></li>
                             </ul>
                         </div>
                         <!--// Responsive Menu //-->
@@ -131,7 +137,22 @@
         </div>
         <!--// Main Content \\-->
         <footer id="ec-footer">
-
+            <!--// CopyRight Section \\-->
+            <div class="ec-bottom-section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <a href="#" class="ec-footer-logo"><img src="images/logo-1.png" alt=""></a>
+                        </div>
+                        <div class="col-md-7">
+                            <div class="ec-right-section">
+                                <a href="index.html" class="backtop-btn">Arriba <i class="fa fa-caret-up"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--// CopyRight Section \\-->
         </footer>
     </div>
     <!--// Main Wrapper \\-->

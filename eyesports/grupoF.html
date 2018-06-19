@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="images/favicon.png">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Grupo F</title>
     <!-- Css Files -->
@@ -50,11 +51,16 @@
                         <nav class="ec-navigation">
                             <ul>
                                 <li><a href="home.html">Home</a></li>
-                                <li><a href="grupos.html">Fixture</a></li>
+                                <li class="active"><a href="#">Fixture</a>
+                                  <ul class="as-dropdown">
+                                      <li><a href="grupos.html">Grupos</a></li>
+                                      <!-- <li><a href="fase-final.html">Fase Final</a></li> -->
+                                  </ul>
+                                </li>
                                 <li><a href="premios.html">Premios</a></li>
                                 <li><a href="ranking.html">Ranking</a></li>
-                                <li><a href="#">Reglamento</a></li>
-                                <li><a href="login.html" onclick="services.logout()">Log Out</a></li>
+                                <li><a href="reglamento.html">Reglamento</a></li>
+                                <li><a href="login.html" onclick="services.logout()">Salir</a></li>
                             </ul>
                         </nav>
                         <!--// Responsive Menu //-->
@@ -65,8 +71,8 @@
                               <li><a href="grupos.html">Fixture</a></li>
                               <li><a href="premios.html">Premios</a></li>
                               <li><a href="ranking.html">Ranking</a></li>
-                              <li><a href="#">Reglamento</a></li>
-                              <li><a href="login.html" onclick="services.logout()">Log Out</a></li>
+                              <li><a href="reglamento.html">Reglamento</a></li>
+                              <li><a href="login.html" onclick="services.logout()">Salir</a></li>
                             </ul>
                         </div>
                         <!--// Responsive Menu //-->
@@ -83,7 +89,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="ec-mini-title">
-                            <h1>Grupo F</h1>
+                            <h1 id="group">Grupo F</h1>
                             <div class="margin-top">
                               <img src="images/img/alemania.png" alt="">
                               <img src="images/img/mexico.png" alt="">
@@ -97,7 +103,7 @@
         </div>
         <!--// Main Banner \\-->
         <!--// Main Content \\-->
-        <button class="ec-default-button input-admin" type="button" name="button" onclick="services.reset(printResult);" >reset</button>
+
         <div class="ec-main-content">
             <!--// Main Section \\-->
             <div class="ec-main-section">
@@ -107,27 +113,30 @@
                             <div class="ec-fancy-title">
                                 <h2>Alemania vs México</h2>
                             </div>
-                            <!-- <div> -->
                             <div class="item">
                                 <ul class="ec-team-matches">
                                     <li>
-                                        <input type="text" class="resultados" id="lGoal" maxlength="1" value="-" onblur="if(this.value == '') { this.value ='-'; }" onfocus="if(this.value =='-') { this.value = ''; }">
+                                        <input type="text" class="resultados" id="lGoal31" maxlength="1" value="-" onblur="if(this.value == '') { this.value ='-'; }" onfocus="if(this.value =='-') { this.value = ''; }">
                                         <img src="images/img/alemania.png" alt="">
                                         <label>Alemania</label>
                                     </li>
                                     <li><small>Domingo</small>
                                         <time class="ec-color" datetime="2008-02-14 20:00">17 Junio </time> <small>12:00</small>
-                                        <input class="input-admin" type="text" name="" value="" placeholder="yyyy-mm-dd hh:mm">
-                                        <button class="input-admin" type="button" name="button" onclick="cambiarFecha(1)">cambiar</button>
+                                        <input class="input-admin" type="text" name="" value="" id="date31" placeholder="yyyy-mm-dd hh:mm">
+                                        <button class="input-admin" type="button" name="button" onclick="cambiarFecha(31)">cambiar</button>
+                                        <div class="resultado-final" id="final31">
+                                          <p class="p-final-result" id="p-local31"></p>
+                                          <label class="label-final-result">Resultado Final</label>
+                                          <p class="p-final-result" id="p-foreign31"></p>
+                                        </div>
                                     </li>
                                     <li>
-                                        <input type="text" class="resultados" id="fGoal" maxlength="1" value="-" onblur="if(this.value == '') { this.value ='-'; }" onfocus="if(this.value =='-') { this.value = ''; }">
+                                        <input type="text" class="resultados" id="fGoal31" maxlength="1" value="-" onblur="if(this.value == '') { this.value ='-'; }" onfocus="if(this.value =='-') { this.value = ''; }">
                                         <img src="images/img/mexico.png" alt="">
                                         <label>México</label>
                                     </li>
                                 </ul>
-                                <button class="ec-default-button" type="button" name="button" onclick="apostar(1,1);" >apostar</button> <!--"setMatchResult(1, getElementById('lGoal').value, getElementById('fGoal').value)"-->
-                                <button class="ec-default-button" type="button" name="button" onclick="services.getGroupMatchs(1, printResult);" >verificar</button>
+                                <button class="ec-default-button center-btn" id="apostar31" type="button" name="button" onclick="apostar(6,31);" >guardar</button>
                                 <a class="ec-ticket-button">Estadio Olímpico Luzhnikí, Moscú</a>
                             </div>
                         </div>
@@ -139,25 +148,28 @@
                             <div class="item">
                                 <ul class="ec-team-matches">
                                     <li>
-                                        <input type="text" class="resultados" maxlength="1" value="-" onblur="if(this.value == '') { this.value ='-'; }" onfocus="if(this.value =='-') { this.value = ''; }">
+                                        <input type="text" class="resultados" id="lGoal32" maxlength="1" value="-" onblur="if(this.value == '') { this.value ='-'; }" onfocus="if(this.value =='-') { this.value = ''; }">
                                         <img src="images/img/suecia.png" alt="">
                                         <label>Suecia</label>
                                     </li>
                                     <li><small>Lunes</small>
                                         <time class="ec-color" datetime="2008-02-14 20:00">18 Junio</time> <small>09:00</small>
-                                        <input class="input-admin" type="text" name="" value="" placeholder="yyyy-mm-dd hh:mm">
-                                        <button class="input-admin" type="button" name="button" onclick="cambiarFecha(2)">cambiar</button>
+                                        <input class="input-admin" type="text" name="" value="" id="date32" placeholder="yyyy-mm-dd hh:mm">
+                                        <button class="input-admin" type="button" name="button" onclick="cambiarFecha(32)">cambiar</button>
+                                        <div class="resultado-final" id="final32">
+                                          <p class="p-final-result" id="p-local32"></p>
+                                          <label class="label-final-result">Resultado Final</label>
+                                          <p class="p-final-result" id="p-foreign32"></p>
+                                        </div>
                                     </li>
                                     <li>
-                                        <input type="text" class="resultados" maxlength="1" value="-" onblur="if(this.value == '') { this.value ='-'; }" onfocus="if(this.value =='-') { this.value = ''; }">
+                                        <input type="text" class="resultados" id="fGoal32" maxlength="1" value="-" onblur="if(this.value == '') { this.value ='-'; }" onfocus="if(this.value =='-') { this.value = ''; }">
                                         <img src="images/img/korea.png" alt="">
                                         <label>R.De Corea</label>
                                     </li>
                                 </ul>
-                                <button class="ec-default-button" type="button" name="button" onclick="apostar(1,2);">apostar</button>
-                                <!-- <div id="ec-Countdowntwo" class="ec-match-countdown"></div> -->
+                                <button class="ec-default-button center-btn" id="apostar32" type="button" name="button" onclick="apostar(6,32);">guardar</button>
                                 <a class="ec-ticket-button">Estadio de Nizhni Nóvgorod, Nizhni Nóvgorod</a>
-                                <!-- <a href="#" class="ec-ticket-button">Less Than 600 Tickets Left For Villa</a> -->
                             </div>
                         </div>
                     </div>
@@ -170,27 +182,31 @@
                           <div class="item">
                               <ul class="ec-team-matches">
                                   <li>
-                                      <input type="text" class="resultados" maxlength="1" value="-" onblur="if(this.value == '') { this.value ='-'; }" onfocus="if(this.value =='-') { this.value = ''; }">
+                                      <input type="text" class="resultados" id="lGoal33" maxlength="1" value="-" onblur="if(this.value == '') { this.value ='-'; }" onfocus="if(this.value =='-') { this.value = ''; }">
                                       <img src="images/img/alemania.png" alt="">
                                       <label>Alemania</label>
                                   </li>
                                   <li><small>Sabado</small>
                                       <time class="ec-color" datetime="2008-02-14 20:00">23 Junio</time> <small>12:00</small>
-                                      <input class="input-admin" type="text" name="" value="" placeholder="yyyy-mm-dd hh:mm">
-                                      <button class="input-admin" type="button" name="button" onclick="cambiarFecha(3)">cambiar</button>
+                                      <input class="input-admin" type="text" name="" value="" id="date33" placeholder="yyyy-mm-dd hh:mm">
+                                      <button class="input-admin" type="button" name="button" onclick="cambiarFecha(33)">cambiar</button>
+                                      <div class="resultado-final" id="final33">
+                                          <p class="p-final-result" id="p-local33"></p>
+                                          <label class="label-final-result">Resultado Final</label>
+                                          <p class="p-final-result" id="p-foreign33"></p>
+                                        </div>
                                   </li>
                                   <li>
-                                      <input type="text" class="resultados" maxlength="1" value="-" onblur="if(this.value == '') { this.value ='-'; }" onfocus="if(this.value =='-') { this.value = ''; }">
+                                      <input type="text" class="resultados" id="fGoal33" maxlength="1" value="-" onblur="if(this.value == '') { this.value ='-'; }" onfocus="if(this.value =='-') { this.value = ''; }">
                                       <img src="images/img/suecia.png" alt="">
                                       <label>Suecia</label>
                                   </li>
                               </ul>
-                              <button class="ec-default-button" type="button" name="button" onclick="apostar(1,3);">apostar</button>
-                              <!-- <div id="ec-Countdowntwo" class="ec-match-countdown"></div> -->
+                              <button class="ec-default-button center-btn" id="apostar33" type="button" name="button" onclick="apostar(6,33);">guardar</button>
                               <a class="ec-ticket-button">Estadio Fisht, Sochi</a>
-                              <!-- <a href="#" class="ec-ticket-button">Less Than 600 Tickets Left For Villa</a> -->
                           </div>
                         </div>
+
                         <div class="col-md-6">
                           <div class="ec-fancy-title">
                               <h2>R.De Corea vs México</h2>
@@ -198,25 +214,28 @@
                           <div class="item">
                               <ul class="ec-team-matches">
                                   <li>
-                                      <input type="text" class="resultados" maxlength="1" value="-" onblur="if(this.value == '') { this.value ='-'; }" onfocus="if(this.value =='-') { this.value = ''; }">
+                                      <input type="text" class="resultados" id="lGoal34" maxlength="1" value="-" onblur="if(this.value == '') { this.value ='-'; }" onfocus="if(this.value =='-') { this.value = ''; }">
                                       <img src="images/img/korea.png" alt="">
                                       <label>R.De Corea</label>
                                   </li>
                                   <li><small>Sabado</small>
                                       <time class="ec-color" datetime="2008-02-14 20:00">23 Junio</time> <small>15:00</small>
-                                      <input class="input-admin" type="text" name="" value="" placeholder="yyyy-mm-dd hh:mm">
-                                      <button class="input-admin" type="button" name="button" onclick="cambiarFecha(4)">cambiar</button>
+                                      <input class="input-admin" type="text" name="" value="" id="date34" placeholder="yyyy-mm-dd hh:mm">
+                                      <button class="input-admin" type="button" name="button" onclick="cambiarFecha(34)">cambiar</button>
+                                      <div class="resultado-final" id="final34">
+                                          <p class="p-final-result" id="p-local34"></p>
+                                          <label class="label-final-result">Resultado Final</label>
+                                          <p class="p-final-result" id="p-foreign34"></p>
+                                        </div>
                                   </li>
                                   <li>
-                                      <input type="text" class="resultados" maxlength="1" value="-" onblur="if(this.value == '') { this.value ='-'; }" onfocus="if(this.value =='-') { this.value = ''; }">
+                                      <input type="text" class="resultados" id="fGoal34" maxlength="1" value="-" onblur="if(this.value == '') { this.value ='-'; }" onfocus="if(this.value =='-') { this.value = ''; }">
                                       <img src="images/img/mexico.png" alt="">
                                       <label>México</label>
                                   </li>
                               </ul>
-                              <button class="ec-default-button" type="button" name="button" onclick="apostar(1,4);">apostar</button>
-                              <!-- <div id="ec-Countdowntwo" class="ec-match-countdown"></div> -->
+                              <button class="ec-default-button center-btn" id="apostar34" type="button" name="button" onclick="apostar(6,34);">guardar</button>
                               <a class="ec-ticket-button">Rostov Arena, Rostov del Don</a>
-                              <!-- <a href="#" class="ec-ticket-button">Less Than 600 Tickets Left For Villa</a> -->
                           </div>
                         </div>
                     </div>
@@ -229,27 +248,31 @@
                           <div class="item">
                               <ul class="ec-team-matches">
                                   <li>
-                                      <input type="text" class="resultados" maxlength="1" value="-" onblur="if(this.value == '') { this.value ='-'; }" onfocus="if(this.value =='-') { this.value = ''; }">
+                                      <input type="text" class="resultados" id="lGoal35" maxlength="1" value="-" onblur="if(this.value == '') { this.value ='-'; }" onfocus="if(this.value =='-') { this.value = ''; }">
                                       <img src="images/img/korea.png" alt="">
                                       <label>R.De Corea</label>
                                   </li>
                                   <li><small>Miercoles</small>
                                       <time class="ec-color" datetime="2008-02-14 20:00">27 Junio</time> <small>11:00</small>
-                                      <input class="input-admin" type="text" name="" value="" placeholder="yyyy-mm-dd hh:mm">
-                                      <button class="input-admin" type="button" name="button" onclick="cambiarFecha(5)">cambiar</button>
+                                      <input class="input-admin" type="text" name="" value="" id="date35" placeholder="yyyy-mm-dd hh:mm">
+                                      <button class="input-admin" type="button" name="button" onclick="cambiarFecha(35)">cambiar</button>
+                                      <div class="resultado-final" id="final35">
+                                        <p class="p-final-result" id="p-local35"></p>
+                                        <label class="label-final-result">Resultado Final</label>
+                                        <p class="p-final-result" id="p-foreign35"></p>
+                                      </div>
                                   </li>
                                   <li>
-                                      <input type="text" class="resultados" maxlength="1" value="-" onblur="if(this.value == '') { this.value ='-'; }" onfocus="if(this.value =='-') { this.value = ''; }">
+                                      <input type="text" class="resultados" id="fGoal35" maxlength="1" value="-" onblur="if(this.value == '') { this.value ='-'; }" onfocus="if(this.value =='-') { this.value = ''; }">
                                       <img src="images/img/alemania.png" alt="">
                                       <label>Alemania</label>
                                   </li>
                               </ul>
-                              <button class="ec-default-button" type="button" name="button" onclick="apostar(1,5);">apostar</button>
-                              <!-- <div id="ec-Countdowntwo" class="ec-match-countdown"></div> -->
+                              <button class="ec-default-button center-btn" id="apostar35" type="button" name="button" onclick="apostar(6,35);">guardar</button>
                               <a class="ec-ticket-button">Kazán Arena, Kazán</a>
-                              <!-- <a href="#" class="ec-ticket-button">Less Than 600 Tickets Left For Villa</a> -->
                           </div>
                         </div>
+
                         <div class="col-md-6">
                           <div class="ec-fancy-title">
                               <h2>México vs Suecia</h2>
@@ -257,45 +280,75 @@
                           <div class="item">
                               <ul class="ec-team-matches">
                                   <li>
-                                      <input type="text" class="resultados" maxlength="1" value="-" onblur="if(this.value == '') { this.value ='-'; }" onfocus="if(this.value =='-') { this.value = ''; }">
+                                      <input type="text" class="resultados" id="lGoal36" maxlength="1" value="-" onblur="if(this.value == '') { this.value ='-'; }" onfocus="if(this.value =='-') { this.value = ''; }">
                                       <img src="images/img/mexico.png" alt="">
                                       <label>México</label>
                                   </li>
                                   <li><small>Miercoles</small>
                                       <time class="ec-color" datetime="2008-02-14 20:00">27 Junio</time> <small>11:00</small>
-                                      <input class="input-admin" type="text" name="" value="" placeholder="yyyy-mm-dd hh:mm">
-                                      <button class="input-admin" type="button" name="button" onclick="cambiarFecha(6)">cambiar</button>
+                                      <input class="input-admin" type="text" name="" value="" id="date36" placeholder="yyyy-mm-dd hh:mm">
+                                      <button class="input-admin" type="button" name="button" onclick="cambiarFecha(36)">cambiar</button>
+                                      <div class="resultado-final" id="final36">
+                                          <p class="p-final-result" id="p-local36"></p>
+                                          <label class="label-final-result">Resultado Final</label>
+                                          <p class="p-final-result" id="p-foreign36"></p>
+                                        </div>
                                   </li>
                                   <li>
-                                      <input type="text" class="resultados" maxlength="1" value="-" onblur="if(this.value == '') { this.value ='-'; }" onfocus="if(this.value =='-') { this.value = ''; }">
+                                      <input type="text" class="resultados" id="fGoal36" maxlength="1" value="-" onblur="if(this.value == '') { this.value ='-'; }" onfocus="if(this.value =='-') { this.value = ''; }">
                                       <img src="images/img/suecia.png" alt="">
                                       <label>Suecia</label>
                                   </li>
                               </ul>
-                              <button class="ec-default-button" type="button" name="button" onclick="apostar(1,6)">apostar</button>
+                              <button class="ec-default-button center-btn" id="apostar36" type="button" name="button" onclick="apostar(6,36)">guardar</button>
                               <a class="ec-ticket-button">Ekaterimburgo Arena, Ekaterimburgo</a>
                           </div>
                         </div>
                     </div>
                 </div>
+
+                <div class="center margin-top margin-bottom">
+                  <!--// TablePoint \\-->
+                  <div class="col-md-6">
+                      <div class="ec-table-point">
+                          <ul class="ec-table-list" id="0">
+                              <li>
+                                  <div class="ec-cell">#</div>
+                                  <div class="ec-cell">Equipo</div>
+                                  <div class="ec-cell">P</div>
+                                  <div class="ec-cell">G</div>
+                                  <div class="ec-cell">E</div>
+                                  <div class="ec-cell">P</div>
+                                  <div class="ec-cell">GF</div>
+                                  <div class="ec-cell">GC</div>
+                              </li>
+                          </ul>                          
+                      </div>
+                  </div>
+                  <!--// TablePoint \\-->
+                </div>
             </div>
             <!--// Main Section \\-->
         </div>
         <!--// Main Content \\-->
+
+
+
         <footer id="ec-footer">
             <!--// CopyRight Section \\-->
             <div class="ec-bottom-section">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-5">
-                            <a href="#" class="ec-footer-logo"><img src="images/footer-logo.png" alt=""></a>
+                            <a href="#" class="ec-footer-logo"><img src="images/logo-1.png" alt=""></a>
                             <div class="ec-copyright">
                                 <!-- <p>© copyright 2016 eyecix all rights reserved</p> -->
                             </div>
                         </div>
+                        <button class="ec-default-button input-admin" type="button" name="button" onclick="services.reset(printResult);" >reset</button>
                         <div class="col-md-7">
                             <div class="ec-right-section">
-                                <a href="index.html" class="backtop-btn">Back to top <i class="fa fa-caret-up"></i></a>
+                                <a href="index.html" class="backtop-btn">Arriba <i class="fa fa-caret-up"></i></a>
                             </div>
                         </div>
                     </div>

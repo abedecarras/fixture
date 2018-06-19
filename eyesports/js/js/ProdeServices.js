@@ -42,6 +42,7 @@ var ProdeServices = (function () {
     p._callback = function () {
         if (this.readyState === 4) {
             if (this.status === 200) {
+                // console.log('error:',that._patchEncoding(this.response));
                 var response = JSON.parse(that._patchEncoding(this.response));
                 that._setToken(response.token);
                 that.viewCallback(response.data);

@@ -4,6 +4,18 @@
 @import url(https://fonts.googleapis.com/css?family=Oswald:400,300,700&subset=latin,latin-ext);
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic&subset=latin,greek-ext);
 
+/*Dusha Font*/
+@font-face {
+	font-family: 'Dusha';
+	src:url('fonts/Dusha.eot');
+	src:url('fonts/Dusha.eot?#iefix') format('embedded-opentype'),
+		  url('fonts/Dusha.woff') format('woff'),
+		  url('fonts/Dusha.ttf') format('truetype'),
+		  url('fonts/Dusha.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
 /*
 01. Theme Typo
 02. Header
@@ -83,7 +95,7 @@ body {
 /* Title Typo */
 body h1, body h2, body h3, body h4, body h5, body h6 {
 	color: #333333;
-	font-family: 'Oswald', sans-serif;
+	font-family: 'Dusha', sans-serif;
 	font-style: normal;
 	font-weight: normal;
 	letter-spacing: 0px;
@@ -300,7 +312,7 @@ address {font-style: italic;}
 	position: fixed;
 	top: 0;
 	width: 100%;
-	z-index: 9999;
+	z-index: 100;
 }
 .ec-loading-section {
     position: fixed;
@@ -309,7 +321,7 @@ address {font-style: italic;}
     background-color: rgba(255,255,255,0.98);
     width: 100%;
     height: 100%;
-    z-index: 99999;
+    z-index: 100;
     text-align: center;
 }
 .ec-main-wrapper { position: relative; }
@@ -324,7 +336,7 @@ address {font-style: italic;}
 }
 .ec-logo {
 	float: left;
-	margin: 30px 0px 40px 0px;
+	margin: 10px 0;
 }
 .ec-social-network {
 	float: left;
@@ -465,7 +477,7 @@ address {font-style: italic;}
 	opacity: 0;
 	visibility: hidden;
 	z-index: 999;
-	font-family: 'Oswald', sans-serif;
+	font-family: 'Dusha', sans-serif;
 
 	-webkit-transition: all 0.4s ease-in-out;
 	   -moz-transition: all 0.4s ease-in-out;
@@ -751,14 +763,15 @@ address {font-style: italic;}
 	width: 100%;
 	background-color: #fcfcfc;
 }
-.ec-main-navsection .ec-logo { margin: 22px 0px 22px 0px; }
+.ec-main-navsection .ec-logo { margin: 10px 0; }
 /* Navigation */
 .ec-navigation {
     background: none;
     border: none;
     float: left;
     margin-bottom: 0px;
-    text-align: left;
+	text-align: left;
+	height: 50px;
 }
 .ec-navigation > ul > li {
 	float: left;
@@ -769,8 +782,8 @@ address {font-style: italic;}
 .ec-navigation > ul > li > a {
     font-size: 14px;
     color: #343434;
-    padding: 35px 0px 37px 0px;
-    font-family: 'Oswald', sans-serif;
+    padding: 28px 0;
+    font-family: 'Dusha', sans-serif;
     text-transform: uppercase;
     float: left;
     position: relative;
@@ -1017,7 +1030,7 @@ address {font-style: italic;}
 }
 .modal-body {
     padding: 37px 35px 21px 35px;
-    display: inline-block;
+    /*display: inline-block;*/
 }
 .ec-modallogin-form span {
     font-size: 18px;
@@ -1210,7 +1223,7 @@ span.ec-blue-transparent {
     width: 100%;
 }
 .ec-mini-title h1 {
-    font-size: 30px;
+    font-size: 40px;
     color: #ffffff;
     line-height: 1.2;
     margin-bottom: 2px;
@@ -1436,10 +1449,10 @@ ul.ec-table-head li .ec-cell {
 	text-align: center;
 	border-left: 1px solid #f3f3f3;
 }
-ul.ec-table-head li .ec-cell:nth-child(1) {
+/*ul.ec-table-head li .ec-cell:nth-child(1) {
 	width: 60px;
 	border-left: none;
-}
+}*/
 ul.ec-table-head li .ec-cell:nth-child(2) { width: 48%; }
 ul.ec-table-head li .ec-cell:nth-child(2),
 ul.ec-table-list li .ec-cell:nth-child(2) {

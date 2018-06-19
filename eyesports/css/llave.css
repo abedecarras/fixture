@@ -1,0 +1,179 @@
+.llave table{
+    table-layout: fixed; 
+    width: auto !important;
+    margin: auto;
+    margin-bottom: 150px;
+}
+.llave .table tbody > tr > th,
+.llave .table > tbody > tr > td{
+    padding: 5px 0;
+}
+.llave table td .gray-bg{
+    background-color: #e6e6e6;
+    border-radius: 3px;
+    text-transform: uppercase;
+    color: #363636;
+    font-size: 12px;
+    width: 60px;
+    position: relative;
+}
+.llave table td .img-btn {
+    margin-bottom: -63px;
+}
+.llave table td.border-left {
+    position: relative;
+}
+.llave table td.border-right {
+    position: relative;
+}
+.llave table td.border-right:after {
+    content:'';
+    height: 70px;
+    width: 2px;
+    background: #969696;
+    position: absolute;
+    top: -20px;
+    right: -4px;
+    z-index: 99;
+}
+.llave table td.extra-height:after{
+    height: 100px !important;
+}
+.llave table td.border-left:after {
+    content:'';
+    height: 70px;
+    width: 2px;
+    background: #969696;
+    position: absolute;
+    top: -20px;
+    left: -4px;
+    z-index: 99;
+}
+.llave table td img{
+    width: 25px;
+    height: 25px;
+}
+.llave table td img.cup{
+    width: auto;
+    height: 100px;
+    margin-bottom: 10px;
+    margin-top: -50px;
+}
+.llave table td .btn{
+    border-radius: 20px;
+    text-transform: uppercase;
+    font-size: 12px;
+    padding: 5px 8px;
+}
+.llave table td .fl-right{
+    float: right;
+}
+.llave table td .right-bullet:after{
+    content:'';
+    height: 15px;
+    width: 15px;
+    background: #969696;
+    border-radius: 50%;
+    position: absolute;
+    top: 5px;
+    right: -11px;
+}
+.llave table td .left-bullet:before{
+    content:'';
+    height: 15px;
+    width: 15px;
+    background: #969696;
+    border-radius: 50%;
+    position: absolute;
+    top: 5px;
+    left: -10px;
+}
+.votar{
+    top: 50%;
+    margin-top: -250px;
+}
+.votar .modal-dialog{
+    height: auto;
+}
+.votar .modal-content{
+    width: 100%;
+    height: 100%;
+}
+.votar .modal-body {
+    padding: 0;
+}
+.votar .modal-body .ec-ticket-button{
+    padding: 5px 0;
+}
+.votar .modal-body .btn-success{
+    border-radius: 50px;
+    margin: auto;
+    text-transform: uppercase;
+    display: block;
+}
+.votar .modal-body .ec-fancy-title h2 {
+    float: none;
+    text-align: center;
+}
+.votar .modal-body .ec-team-matches li {
+    padding-bottom: 0;
+}
+.votar .modal-header {
+    border: none;
+    padding: 0 10px;
+}
+.votar .close {
+    font-size: 32px;
+}
+@media (max-width: 767px){
+    .llave table td .btn{font-size: 11px;}
+    .llave table td .gray-bg {font-size: 11px; width: 55px;}
+    move
+}
+@media (max-width: 570px){
+    .llave table td img.cup{
+        height: 70px;
+        max-width: 37px;
+        margin-top: -45px;
+        margin-bottom: 10px;
+        margin-top: -100px;
+    }
+    .gray-bg.move-left{
+        margin-left: -18px;
+        z-index: 100;
+    }
+    button.move-left{
+        margin-left: -50px;
+    }
+    .gray-bg.move-right{
+        margin-right: -18px;
+        z-index: 100;
+    }
+    button.move-right{
+        margin-right: -50px;
+    }
+    .llave table td .right-bullet:after {
+        height: 10px;
+        width: 10px;
+        right: -8px;
+    }
+    .llave table td .left-bullet::before {
+        height: 10px;
+        width: 10px;
+        left: -8px;
+    }
+    .llave table td .img-btn .btn{
+        margin-top: -45px;
+    }
+}
+@media (max-width: 480px){
+    .llave .container{
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    .ec-team-matches li {
+        width: 33.333%;
+    }
+}
+
+	

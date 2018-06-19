@@ -38,29 +38,29 @@
             <div class="ec-main-navsection">
                 <div class="container">
                     <a href="#" class="ec-logo"><img src="images/logo-1.png" alt=""></a>
-                    <div class="ec-right-section">
+                    <!-- <div class="ec-right-section">
                         <nav class="ec-navigation">
                             <ul>
-                                <li><a href="#">Home</a></li>
+                                <li><a href="#">Inicio</a></li>
                                 <li><a href="#">Fixture</a></li>
                                 <li><a href="#">Premios</a></li>
                                 <li><a href="#">Ranking</a></li>
                                 <li><a href="#">Reglamento</a></li>
                             </ul>
-                        </nav>
+                        </nav> -->
                         <!--// Responsive Menu //-->
-                        <div id="as-menu" class="as-menuwrapper">
+                        <!-- <div id="as-menu" class="as-menuwrapper">
                             <button class="as-trigger">Open Menu</button>
                             <ul class="as-menu">
-                                <li><a href="#">Home</a></li>
+                                <li><a href="#">Inicio</a></li>
                                 <li><a href="#">Fixture</a></li>
                                 <li><a href="#">Premios</a></li>
                                 <li><a href="#">Ranking</a></li>
                                 <li><a href="#">Reglamento</a></li>
                             </ul>
-                        </div>
+                        </div> -->
                         <!--// Responsive Menu //-->
-                    </div>
+                    <!-- </div> -->
                 </div>
             </div>
             <!--// Main Header \\-->
@@ -87,10 +87,11 @@
                                                     <span class="ec-color">Login</span>
                                                     <form name="myForm">
                                                         <ul>
+                                                          <li><p class="error p-error">Usuario o DNI incorrectos</p></li>
                                                             <li>
-                                                                <input type="text" name="fname" value="Nombre y Apellido" onblur="if(this.value == '') { this.value ='Nombre y Apellido'; }" onfocus="if(this.value =='Nombre y Apellido') { this.value = ''; }"> </li>
+                                                                <input class="input" type="text" name="fname" value="DNI" onblur="if(this.value == '') { this.value ='DNI'; }" onfocus="if(this.value =='DNI') { this.value = ''; }"> </li>
                                                             <li>
-                                                                <input type="text" name="fpassword" value="D.N.I" onblur="if(this.value == '') { this.value ='D.N.I'; }" onfocus="if(this.value =='D.N.I') { this.value = ''; }"> </li>
+                                                                <input class="input" type="password" name="fpassword" value="Contraseña" onblur="if(this.value == '') { this.value ='Contraseña'; }" onfocus="if(this.value =='Contraseña') { this.value = ''; }"> </li>
                                                             <li>
                                                             <li>
                                                                 <button type="button" class="ec-default-button login text-button" name="button" onclick="validation()">ingresar</button>
