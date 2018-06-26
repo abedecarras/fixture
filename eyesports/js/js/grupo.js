@@ -115,13 +115,15 @@ function apostar(idGroup, idMatch) {
     }
 
     let teams = response[group].table;
+    let posicion = 1;
     console.log(teams);
     for (var i = 3; i >= 0; i--) {
       console.log(teams[i]);
       let li = document.createElement('li');
 
       let pos = document.createElement('div');
-      pos.textContent = i+1;
+      pos.textContent = posicion;
+      posicion++;
       pos.className = 'ec-cell';
       let team = document.createElement('div');
       team.textContent = teams[i].team;
